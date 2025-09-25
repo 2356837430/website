@@ -1,0 +1,114 @@
+/**
+ * 全局动画样式文件
+ * 定义页面元素的进入动画效果，提供多种动画类型和配置选项
+ */
+
+/* ==================== 基础动画类 ==================== */
+
+/* 从下到上的浮现动画 - 最常用的动画效果 */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 从左到右的浮现动画 */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 从右到左的浮现动画 */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 缩放浮现动画 */
+.fade-in-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-scale.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 旋转浮现动画 */
+.fade-in-rotate {
+  opacity: 0;
+  transform: rotate(-10deg) scale(0.8);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-rotate.animate {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* ==================== 响应式动画调整 ==================== */
+
+/* 移动端动画调整 - 减少动画幅度以适应小屏幕 */
+@media (max-width: 768px) {
+  /* 垂直移动动画在移动端减少移动距离 */
+  .fade-in-up {
+    transform: translateY(30px);
+  }
+  
+  /* 水平移动动画在移动端减少移动距离 */
+  .fade-in-left {
+    transform: translateX(-30px);
+  }
+  
+  .fade-in-right {
+    transform: translateX(30px);
+  }
+  
+  /* 缩放动画在移动端减少缩放幅度 */
+  .fade-in-scale {
+    transform: scale(0.9);
+  }
+  
+  /* 旋转动画在移动端减少旋转角度 */
+  .fade-in-rotate {
+    transform: rotate(-5deg) scale(0.9);
+  }
+}
+
+/* ==================== 动画配置类 ==================== */
+
+/* 动画延迟类 - 用于创建错落有致的动画效果 */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-900 { animation-delay: 900ms; }
+.delay-1000 { animation-delay: 1000ms; }
+
+/* 动画持续时间类 - 用于控制动画速度 */
+.duration-fast { transition-duration: 0.4s; }   /* 快速动画 */
+.duration-normal { transition-duration: 0.8s; } /* 标准动画 */
+.duration-slow { transition-duration: 1.2s; }   /* 慢速动画 */
