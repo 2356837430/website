@@ -5,7 +5,9 @@ org\example\backend\controller\CsrfController.class
 org\example\backend\controller\CaptchaController.class
 org\example\backend\controller\FileController.class
 org\example\backend\entity\Account.class
+org\example\backend\entity\MyData.class
 org\example\backend\service\CaptchaService$CaptchaResult.class
+org\example\backend\service\RateLimitService.class
 org\example\backend\filter\JwtAuthenticationFilter.class
 org\example\backend\service\CaptchaService.class
 org\example\backend\service\UserService.class
@@ -13,3 +15,4 @@ org\example\backend\BackendApplication.class
 org\example\backend\mapper\UserMapper.class
 org\example\backend\entity\RestBean.class
 org\example\backend\config\SpaCsrfTokenRequestHandler.class
+org\example\backend\controller\UserController.class
