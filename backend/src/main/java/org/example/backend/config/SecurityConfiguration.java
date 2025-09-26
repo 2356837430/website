@@ -79,8 +79,11 @@ public class SecurityConfiguration {
     private CookieCsrfTokenRepository csrfTokenRepository() {
         CookieCsrfTokenRepository repository = CookieCsrfTokenRepository.withHttpOnlyFalse();
         repository.setCookieCustomizer(cookie -> cookie
+                // 生产环境加上，本地开发环境注释掉
+                // .domain("sinkshark.site") 
                 .sameSite("None")
                 .secure(true)
+                .httpOnly(false)
         );
         return repository;
     }
