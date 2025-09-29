@@ -71,26 +71,79 @@
 @media (max-width: 768px) {
   /* 垂直移动动画在移动端减少移动距离 */
   .fade-in-up {
-    transform: translateY(30px);
+    transform: translateY(25px);
+    transition-duration: 0.6s; /* 加快动画速度 */
   }
   
   /* 水平移动动画在移动端减少移动距离 */
   .fade-in-left {
-    transform: translateX(-30px);
+    transform: translateX(-25px);
+    transition-duration: 0.6s;
   }
   
   .fade-in-right {
-    transform: translateX(30px);
+    transform: translateX(25px);
+    transition-duration: 0.6s;
   }
   
   /* 缩放动画在移动端减少缩放幅度 */
   .fade-in-scale {
-    transform: scale(0.9);
+    transform: scale(0.92);
+    transition-duration: 0.6s;
   }
   
   /* 旋转动画在移动端减少旋转角度 */
   .fade-in-rotate {
-    transform: rotate(-5deg) scale(0.9);
+    transform: rotate(-3deg) scale(0.92);
+    transition-duration: 0.6s;
+  }
+}
+
+/* 小屏幕手机动画优化 */
+@media (max-width: 480px) {
+  .fade-in-up {
+    transform: translateY(20px);
+    transition-duration: 0.5s;
+  }
+  
+  .fade-in-left {
+    transform: translateX(-20px);
+    transition-duration: 0.5s;
+  }
+  
+  .fade-in-right {
+    transform: translateX(20px);
+    transition-duration: 0.5s;
+  }
+  
+  .fade-in-scale {
+    transform: scale(0.95);
+    transition-duration: 0.5s;
+  }
+  
+  .fade-in-rotate {
+    transform: rotate(-2deg) scale(0.95);
+    transition-duration: 0.5s;
+  }
+  
+  /* 移动端减少动画延迟 */
+  .delay-100 { animation-delay: 50ms; }
+  .delay-200 { animation-delay: 100ms; }
+  .delay-300 { animation-delay: 150ms; }
+  .delay-400 { animation-delay: 200ms; }
+  .delay-500 { animation-delay: 250ms; }
+}
+
+/* 减弱动画设置 - 为用户提供选择 */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up,
+  .fade-in-left,
+  .fade-in-right,
+  .fade-in-scale,
+  .fade-in-rotate {
+    transform: none;
+    transition-duration: 0.2s;
+    animation-delay: 0ms;
   }
 }
 

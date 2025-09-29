@@ -364,30 +364,79 @@ a:visited {
   
   .main-title {
     font-size: 28px; /* 移动端字体缩小 */
+    line-height: 1.3;
+    padding: 0 10px; /* 添加左右内边距 */
+  }
+  
+  .description-text {
+    font-size: 18px; /* 移动端字体大小 */
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  
+  .section-title {
+    font-size: 22px; /* 移动端字体大小 */
+    margin: 25px 0 12px 0;
+    padding-left: 12px;
+  }
+  
+  /* 机构卡片移动端优化 */
+  .agency-cards {
+    gap: 15px;
+    margin: 25px 0;
+  }
+  
+  .agency-card {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .agency-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .agency-desc {
+    font-size: 16px;
+    line-height: 1.5;
   }
   
   .navigation-section {
     flex-direction: column; /* 移动端卡片垂直排列 */
     align-items: center;
-    gap: 30px; /* 移动端增加卡片间距 */
-    padding: 0 15px; /* 移动端减小左右边距 */
+    gap: 25px; /* 移动端卡片间距 */
+    padding: 0 10px; /* 移动端边距 */
     width: 100%; /* 移动端恢复正常宽度 */
+    margin-top: 30px;
   }
   
   .nav-card {
     width: 100%; /* 移动端卡片占满宽度 */
-    max-width: 350px; /* 限制最大宽度 */
-    padding: 30px 25px; /* 移动端调整内边距 */
-    min-height: 180px; /* 移动端调整高度 */
+    max-width: 380px; /* 限制最大宽度 */
+    padding: 35px 25px; /* 移动端调整内边距 */
+    min-height: 160px; /* 移动端调整高度 */
     flex: none; /* 移动端取消flex:1 */
+    border-radius: 12px;
+    /* 增强触摸反馈 */
+    transition: all 0.2s ease;
+    touch-action: manipulation;
+  }
+  
+  .nav-card:active {
+    transform: translateY(-4px) scale(0.98);
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.2);
   }
   
   .card-title {
-    font-size: 22px; /* 移动端增大标题字体 */
+    font-size: 22px; /* 移动端标题字体 */
+    line-height: 1.2;
+    margin-bottom: 12px;
   }
   
   .card-desc {
-    font-size: 18px; /* 移动端增大描述字体 */
+    font-size: 17px; /* 移动端描述字体 */
+    line-height: 1.4;
   }
   
   .logout-section {
@@ -396,14 +445,88 @@ a:visited {
   }
   
   .logout-btn {
-    padding: 18px 40px; /* 移动端调整退出按钮，与导航按钮保持一致 */
-    font-size: 18px;
+    padding: 16px 32px; /* 移动端调整退出按钮 */
+    font-size: 17px;
+    min-width: 140px;
+    border-radius: 8px;
+    /* 增强触摸反馈 */
+    touch-action: manipulation;
+    transition: all 0.2s ease;
+  }
+  
+  .logout-btn:active {
+    transform: translateY(-1px) scale(0.98);
   }
   
   .image-header {
     min-height: 150px; /* 移动端减少图片高度 */
   }
   
+  .title-section {
+    margin-bottom: 60px; /* 移动端调整间距 */
+    margin-top: 30px;
+  }
+  
+  .description-section {
+    margin-bottom: 40px;
+  }
+}
 
+/* 小屏幕手机适配 */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 12px;
+  }
+  
+  .main-title {
+    font-size: 24px;
+    padding: 0 8px;
+  }
+  
+  .description-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  
+  .agency-card {
+    padding: 18px;
+  }
+  
+  .agency-title {
+    font-size: 17px;
+  }
+  
+  .agency-desc {
+    font-size: 15px;
+  }
+  
+  .nav-card {
+    max-width: 100%;
+    padding: 30px 20px;
+    min-height: 140px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+  }
+  
+  .card-desc {
+    font-size: 16px;
+  }
+  
+  .logout-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    min-width: 120px;
+  }
+  
+  .image-header {
+    min-height: 120px;
+  }
 }
 </style>

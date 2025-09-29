@@ -490,17 +490,121 @@ usePageAnimation();
   }
 
   /* 移动端表格样式 */
+  .table-container {
+    margin: 20px -15px; /* 扩展到屏幕边缘 */
+    border-radius: 0;
+    box-shadow: none;
+    border-top: 1px solid #E8E0D8;
+    border-bottom: 1px solid #E8E0D8;
+  }
+  
   .data-table {
-    font-size: 16px;
+    font-size: 14px;
+    border-radius: 0;
   }
 
   .data-table th,
   .data-table td {
-    padding: 12px 15px;
+    padding: 12px 8px;
+    font-size: 14px;
+    word-break: break-word;
   }
 
   .data-table th {
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  /* 移动端表格可滚动提示 */
+  .table-container::before {
+    content: "← 左右滑动查看更多 →";
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #8B4513;
+    padding: 8px 0;
+    background: rgba(139, 69, 19, 0.05);
+    border-bottom: 1px solid #E8E0D8;
+  }
+}
+
+/* 小屏幕手机适配 */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 12px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    padding: 0 8px;
+  }
+  
+  .back-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    min-width: 120px;
+    /* 增强触摸反馈 */
+    touch-action: manipulation;
+    transition: all 0.2s ease;
+  }
+  
+  .back-btn:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+  
+  .description-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .content-list {
+    font-size: 16px;
+    padding-left: 16px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  
+  .method-category {
+    padding: 18px;
+  }
+  
+  .method-title {
+    font-size: 16px;
+  }
+  
+  .method-list li {
+    font-size: 14px;
+  }
+  
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  
+  .step-content h4 {
+    font-size: 14px;
+  }
+  
+  .step-content p {
+    font-size: 12px;
+  }
+  
+  .data-table {
+    font-size: 12px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+  
+  .data-table th {
+    font-size: 13px;
   }
 }
 </style>

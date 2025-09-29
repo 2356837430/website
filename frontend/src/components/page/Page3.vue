@@ -425,13 +425,97 @@ usePageAnimation();
     font-size: 18px; /* 与MainPage保持一致 */
   }
   
+  /* 移动端表格样式优化 */
+  .table-container {
+    margin: 20px -15px; /* 扩展到屏幕边缘 */
+    border-radius: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #E8E0D8;
+    border-bottom: 1px solid #E8E0D8;
+  }
+  
   .data-table {
-    font-size: 16px;
+    font-size: 13px;
+    border-radius: 0;
   }
   
   .data-table th,
   .data-table td {
-    padding: 10px 8px;
+    padding: 10px 6px;
+    font-size: 13px;
+    word-break: break-word;
+    line-height: 1.3;
+  }
+  
+  .data-table th {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* 移动端表格可滚动提示 */
+  .table-container::before {
+    content: "← 左右滑动查看更多 →";
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #8B4513;
+    padding: 8px 0;
+    background: rgba(139, 69, 19, 0.05);
+    border-bottom: 1px solid #E8E0D8;
+  }
+}
+
+/* 小屏幕手机适配 */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 12px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    padding: 0 8px;
+  }
+  
+  .back-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    min-width: 120px;
+    /* 增强触摸反馈 */
+    touch-action: manipulation;
+    transition: all 0.2s ease;
+  }
+  
+  .back-btn:active {
+    transform: translateY(-1px) scale(0.98);
+  }
+  
+  .description-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .content-list {
+    font-size: 16px;
+    padding-left: 16px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+  
+  .data-table {
+    font-size: 12px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+  
+  .data-table th {
+    font-size: 13px;
   }
 }
 </style>

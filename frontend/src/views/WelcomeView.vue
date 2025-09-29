@@ -93,12 +93,58 @@ onMounted(async () => {
         font-size: 24px; /* 移动端字体缩小 */
         top: 20px; 
     }
+    
     .content-layer { 
         padding: 0 16px; /* 移动端减少内边距 */
+        justify-content: center; /* 移动端居中显示 */
     }
+    
     .form-section { 
         width: 100%; /* 移动端占满宽度 */
-        padding: 24px 18px; 
+        max-width: 400px; /* 限制最大宽度 */
+        padding: 30px 20px; /* 调整内边距 */
+        margin: 20px 0; /* 添加上下边距 */
+        background: rgba(255, 255, 255, 0.98); /* 提高背景透明度 */
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* 增强阴影 */
+    }
+    
+    /* 移动端背景优化 */
+    .background-full {
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+/* 小屏幕手机适配 */
+@media (max-width: 480px) {
+    .content-layer {
+        padding: 0 12px;
+    }
+    
+    .form-section {
+        width: 100%;
+        max-width: 350px;
+        padding: 25px 15px;
+        margin: 15px 0;
+        border-radius: 12px;
+    }
+    
+    .welcome-container {
+        min-height: 100vh;
+        position: relative;
+    }
+}
+
+/* 横屏模式优化 */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .content-layer {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+    
+    .form-section {
+        margin: 10px 0;
+        padding: 20px 15px;
     }
 }
 </style>
