@@ -251,87 +251,21 @@ usePageAnimation();
   }
   
   .back-btn {
-    padding: 16px 32px;
-    font-size: 17px;
-    min-width: 140px;
-    border-radius: 8px;
-    /* 增强触摸反馈 */
-    touch-action: manipulation;
-    transition: all 0.2s ease;
-  }
-  
-  .back-btn:active {
-    transform: translateY(-1px) scale(0.98);
+    padding: 18px 40px;
+    font-size: 18px;
   }
   
   .description-text {
-    font-size: 17px; /* 移动端字体大小 */
-    line-height: 1.6;
-    margin-bottom: 18px;
+    font-size: 18px; /* 与MainPage保持一致 */
   }
   
   .content-list {
-    font-size: 17px; /* 移动端字体大小 */
-    line-height: 1.6;
-    padding-left: 18px;
-  }
-  
-  .content-list li {
-    margin-bottom: 12px;
+    font-size: 18px; /* 与MainPage保持一致 */
   }
 
   /* 移动端子标题样式 */
   .subsection-title {
     font-size: 18px;
-    margin: 20px 0 8px 0;
-    padding-left: 10px;
-  }
-  
-  .section-title {
-    font-size: 22px;
-    margin: 25px 0 12px 0;
-    padding-left: 12px;
-  }
-  
-  .title-section {
-    margin-bottom: 50px;
-  }
-}
-
-/* 小屏幕手机适配 */
-@media (max-width: 480px) {
-  .main-content {
-    padding: 12px;
-  }
-  
-  .page-title {
-    font-size: 24px;
-    padding: 0 8px;
-  }
-  
-  .back-btn {
-    padding: 14px 28px;
-    font-size: 16px;
-    min-width: 120px;
-  }
-  
-  .description-text {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  .content-list {
-    font-size: 16px;
-    padding-left: 16px;
-  }
-  
-  .section-title {
-    font-size: 20px;
-    padding-left: 10px;
-  }
-  
-  .subsection-title {
-    font-size: 17px;
   }
 
 }
